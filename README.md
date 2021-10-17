@@ -1,11 +1,11 @@
-# *kakaobank-task-2021-10*
+# *Kafka to Mysql Example*
 
 ## *사전준비*
 > **첨부된 파일을 순차적으로 읽어서 Kafka 토픽 파티션에 Round-Robin 방식으로 넣어주세요.**
 
 ### *kafka setup*
 * docker 를 이용해 kafka 환경을 구성하였습니다.
-* [docker-compose.yml]()
+* [docker-compose.yml](https://github.com/jx2lee/kafka-to-mysql-example/blob/main/docker-compose.yml)
   * kafka container
     * container_name: local-kafka9092
     * port: 9092
