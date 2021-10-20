@@ -2,9 +2,9 @@ package com.jx2lee.consumerv1.streams.domain.table;
 
 import lombok.Builder;
 import lombok.Getter;
-import lombok.Setter;
 
 @Builder
+@Getter
 public class Customers {
     private String cstno;
     private String cust_nm;

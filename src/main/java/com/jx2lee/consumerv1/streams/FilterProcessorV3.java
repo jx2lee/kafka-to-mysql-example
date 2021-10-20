@@ -21,7 +21,7 @@ public class FilterProcessorV3 implements ValueTransformerWithKey<String, String
 
     @Override
     public JsonElement transform(String key, String value) {
-        List<String> valueList = Arrays.stream(value.split(",")).collect(Collectors.toList());
+        List<String> valueList = stringToArray(value);
         Customer customer = new Customer(valueList.get(0), valueList.get(1), valueList.get(2), valueList.get(3));
 
         Gson gson = new Gson();
@@ -30,6 +30,10 @@ public class FilterProcessorV3 implements ValueTransformerWithKey<String, String
         JsonElement jsonElement = JsonParser.parseString(s);
         log.info(jsonElement.toString());
         return jsonElement;
+    }
+
+    private List<String> stringToArray(String value) {
+        return Arrays.stream(value.split(",")).collect(Collectors.toList());
     }
 
     @Override
